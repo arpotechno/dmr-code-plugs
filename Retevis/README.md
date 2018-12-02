@@ -41,3 +41,26 @@ you'll transmit to the same talkgroup.
 
 The ninth Analog zone has five simplex channels and 11 repeaters programmed
 into it.
+
+## RT3S_GPS_NOCALL_1234
+
+The basic configuration has been duplicated from the RT3 channel layout, so
+it's very similar to it.
+
+ - The FinDMR zone contains all the finnish DMR repeaters, including Oulu and Tervola.
+ - The SweDMR zone contains the Seskarö (Seittenkaari in Haparanda municipality) and Kalix (Kainuu) repeaters.
+ - The AprsDMR zone contains the position reporting via those repeaters.
+ - The Pori zone has only one analog channel programmed into it in order to make the most of the mixed mode repeater in Arctopolis.
+
+In case you've purchased a GPS version of the handheld radio, you might as well want to send
+position reports to [aprs.fi](https://aprs.fi/). Should you wish to do that, first
+verify that you've [correct settings on selfcare](http://blog.retevis.com/how-to-set-rt3s-aprs/), then go outside,
+wait for the proper GPS lock and push the transmit button. Leave the radio into
+the channel to automatically retransmit the location.
+
+The position reporting should work both from Finland and Sweden.
+
+If you don't want to send your position, then avoid transmitting or staying in the GPS
+channels altogether. And if you absolutely hate the idea, then you might want to consider
+changing all the GPS lines in the conf file into receive only channels to
+prevent yourself from sending the location data accidentally.
